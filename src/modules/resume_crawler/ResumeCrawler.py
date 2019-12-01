@@ -118,7 +118,7 @@ class ResumeCrawler:
             for each_section in additionalinfo_sections:
                 additional_info = each_section.text.strip()
         #print(type(additional_info), additional_info)
-        additional_info = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in additional_info }]
+        #additional_info = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in additional_info }]
         return additional_info
 
 
