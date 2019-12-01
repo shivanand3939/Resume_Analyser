@@ -1,7 +1,7 @@
 import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import time
+import time, os
 import pandas as pd
 import selenium
 import requests
@@ -9,26 +9,35 @@ import json
 
 class ResumeCrawler:
 
-    def __init__(self):
-        urlpage = 'https://resumes.indeed.com/search?q=datascience&l=&searchFields='
-        #urlpage = 'https://resumes.indeed.com/resume/ba0f7ffb7d5bc285?s=l%3D%26q%3Ddatascience%26searchFields%3Djt'
-        #print(urlpage)
+    def __init__(self, urlpage):
         print( selenium.__file__)
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('disable-infobars')
+        chrome_options.add_argument('--disable-extensions')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        self.driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
+        self.driver.get(urlpage)
+        time.sleep(6)
+
+
+    def get_driver_for_single_resume(self, url):
         chrome_options = webdriver.ChromeOptions()
         #chrome_options.add_argument(seleniumproxy)
         chrome_options.add_argument('disable-infobars')
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-        driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
-        driver.get(urlpage)
-        p_element = driver.page_source
-        self.soup = BeautifulSoup(p_element, 'lxml')
+        child_driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
+        child_driver.get(url)
+        time.sleep(1)
+        p_element = child_driver.page_source
+        soup = BeautifulSoup(p_element, 'lxml')
+        return soup, child_driver
 
 
-    def get_education(self):
+    def get_education(self, soup):
         education=[]
-        education_contents = self.soup.find_all('div', attrs={'class': 'education-content'})
-        education_sections = self.soup.find_all('div', attrs={'class': 'education-section'})
+        education_contents = soup.find_all('div', attrs={'class': 'education-content'})
+        education_sections = soup.find_all('div', attrs={'class': 'education-section'})
     #print(len(education_contents))
         for each_section in education_sections:
             education_item = {}
@@ -46,12 +55,13 @@ class ResumeCrawler:
             for each_description in descriptions:
                 education_item['description'] = each_description.text.strip()
             education.append(education_item)
+        education = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in education }]
         return education
 
 
-    def get_work_experience(self):
+    def get_work_experience(self, soup):
         work_experience=[]
-        work_experience_contents = self.soup.find_all('div', attrs={'class': 'workExperience-content'})
+        work_experience_contents = soup.find_all('div', attrs={'class': 'workExperience-content'})
         for each_content in work_experience_contents:
             work_experience_sections = each_content.find_all('div', attrs={'class': 'work-experience-section'})
             for each_section in work_experience_sections:
@@ -69,46 +79,52 @@ class ResumeCrawler:
                 for each_description in descriptions:
                     work['description'] = each_description.text.strip()
             work_experience.append(work)
+        work_experience = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in work_experience }]
         return work_experience
 
 
-    def get_skills(self) :
+    def get_skills(self, soup) :
         skills=[]
-        skill_contents = self.soup.find_all('div', attrs={'class': 'skills-content'})
+        skill_contents = soup.find_all('div', attrs={'class': 'skills-content'})
         for each_content in skill_contents:
             skill_sections = each_content.find_all('div', attrs={'id': 'skills-items'})
             for each_section in skill_sections:
                 skill_texts = each_section.find_all(name='span', attrs={'class': 'skill-text'})
                 for each_text in skill_texts:
                     skills.append(each_text.text.strip())
+        skills = [ dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in skills }]
+
         return skills
 
 
-    def get_links(self):
+    def get_links(self, soup):
         links=[]
-        links_contents = self.soup.find_all('div', attrs={'class': 'links-content'})
+        links_contents = soup.find_all('div', attrs={'class': 'links-content'})
         for each_content in links_contents:
             links_sections = each_content.find_all('div', attrs={'id': 'link-items'})
             for each_section in links_sections:
                 links_texts = each_section.find_all(name='div', attrs={'class': 'link_url'})
                 for each_text in links_texts:
                     links.append(each_text.text.strip())
+        links = [dict(t) if type(t) == tuple else t for t in {tuple(d.items())  if type(d) == dict else d for d in links}]
         return links
 
 
-    def get_additional_info(self):
+    def get_additional_info(self, soup):
         additional_info=[]
-        additionalInfo_contents = self.soup.find_all('div', attrs={'class': 'additionalInfo-content'})
+        additionalInfo_contents = soup.find_all('div', attrs={'class': 'additionalInfo-content'})
         for each_content in additionalInfo_contents:
             additionalinfo_sections = each_content.find_all('div', attrs={'id': 'additionalinfo-section'})
             for each_section in additionalinfo_sections:
                 additional_info = each_section.text.strip()
+        #print(type(additional_info), additional_info)
+        additional_info = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in additional_info }]
         return additional_info
 
 
-    def get_certifications(self):
+    def get_certifications(self, soup):
         certifications=[]
-        certifications__contents = self.soup.find_all('div', attrs={'class': 'certification-content'})
+        certifications__contents = soup.find_all('div', attrs={'class': 'certification-content'})
         for each_content in certifications__contents:
             certification_sections = each_content.find_all('div', attrs={'class': 'certification-section'})
             for each_section in certification_sections:
@@ -125,22 +141,24 @@ class ResumeCrawler:
                     certification['description'] = each_description.text.strip()
 
                     certifications.append(certification)
+        certifications = [dict(t) if type(t) == tuple else t for t in {tuple(d.items())  if type(d) == dict else d for d in certifications}]
         return certifications
 
 
-    def get_summaries(self):
+    def get_summaries(self, soup):
         #print(certifications)
         summaries = []
-        res_summaries = self.soup.find_all('div', attrs={'id': 'res_summary'})
+        res_summaries = soup.find_all('div', attrs={'id': 'res_summary'})
         for each_summary in res_summaries:
             res_summary = each_summary.text.strip()
             summaries.append(res_summary)
+        summaries = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in summaries  }]
         return summaries
 
 
-    def get_awards(self):
+    def get_awards(self, soup):
         awards=[]
-        awards_contents = self.soup.find_all('div', attrs={'class': 'awards-content'})
+        awards_contents = soup.find_all('div', attrs={'class': 'awards-content'})
         for each_content in awards_contents:
             awards_sections = each_content.find_all('div', attrs={'class': 'award-section'})
             for each_section in awards_sections:
@@ -155,20 +173,53 @@ class ResumeCrawler:
                 for each_description in descriptions:
                     award_item['description'] = each_description.text.strip()
                 awards.append(award_item)
+        awards = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in awards }]
         return awards
 
 
-    def get_data(self):
+    def initialise_files(self, file_name):
+        if not os.path.isfile(file_name):
+            with open(file_name, 'w') as f:
+                f.write('')
+
+
+    def get_data(self, soup):
         content={}
-        content['education'] = self.get_education()
-        content['work_experience'] = self.get_work_experience()
-        content['skills'] = self.get_skills()
-        content['links'] = self.get_links()
-        content['additional_info'] = self.get_additional_info()
-        content['certifications'] = self.get_certifications()
-        content['summaries'] = self.get_summaries()
-        content['awards'] = self.get_awards()
+        content['education'] = self.get_education(soup)
+        content['work_experience'] = self.get_work_experience(soup)
+        content['skills'] = self.get_skills(soup)
+        content['links'] = self.get_links(soup)
+        content['additional_info'] = self.get_additional_info(soup)
+        content['certifications'] = self.get_certifications(soup)
+        content['summaries'] = self.get_summaries(soup)
+        content['awards'] = self.get_awards(soup)
+
+        return content
 
 
-        with open('files/result.json', 'w') as fp:
-            json.dump(content, fp)
+    def get_resume_links(self):
+        count=0
+        urllinks=[]
+        elements = self.driver.find_elements_by_css_selector("div.rezemp-ResumeSearchCard a")
+        for element in elements:
+            count+=1
+            urllinks.append(element.get_attribute("href"))
+
+
+        elements = self.driver.find_elements_by_css_selector("div.rezemp-ResumeSummaryCard a")
+        for element in elements:
+            count+=1
+            urllinks.append(element.get_attribute("href"))
+
+        print(len(urllinks))
+        self.driver.close()
+
+        contents = []
+        for url in urllinks[:2]:
+            soup, child_driver = self.get_driver_for_single_resume(url)
+            contents.append(self.get_data(soup))
+            child_driver.close()
+
+        self.initialise_files('files/result.json')
+        with open('files/result.json', 'a') as fp:
+            json.dump(contents, fp)
