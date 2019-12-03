@@ -13,7 +13,7 @@ import json
 #urlpage='https://resumes.indeed.com/search?q=datascience&l=india&checkbox=jt&searchFields=jt'
 #urlpage = 'https://resumes.indeed.com/search?q=datascience&l=india&checkbox=jt&searchFields=jt' 
 urlpage='https://resumes.indeed.com/search?l=&q=datascience&searchFields=jt'
-#print(urlpage)
+print(urlpage)
 print( selenium.__file__)
 options = webdriver.ChromeOptions()
 #options.add_argument("--incognito")
