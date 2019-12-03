@@ -6,6 +6,8 @@ import pandas as pd
 import selenium
 import requests
 import json
+import codecs
+import re
 
 class ResumeCrawler:
 
@@ -17,7 +19,7 @@ class ResumeCrawler:
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         self.driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
         self.driver.get(urlpage)
-        time.sleep(6)
+        time.sleep(8)
 
 
     def get_driver_for_single_resume(self, url):
@@ -78,7 +80,7 @@ class ResumeCrawler:
                 descriptions = each_section.find_all(name='div', attrs={'class': 'work_description'})
                 for each_description in descriptions:
                     work['description'] = each_description.text.strip()
-            work_experience.append(work)
+                work_experience.append(work)
         work_experience = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in work_experience }]
         return work_experience
 
@@ -92,8 +94,8 @@ class ResumeCrawler:
                 skill_texts = each_section.find_all(name='span', attrs={'class': 'skill-text'})
                 for each_text in skill_texts:
                     skills.append(each_text.text.strip())
-        skills = [ dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in skills }]
-
+        #skills = [ dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in skills }]
+        skills=list(set(skills))
         return skills
 
 
@@ -106,7 +108,8 @@ class ResumeCrawler:
                 links_texts = each_section.find_all(name='div', attrs={'class': 'link_url'})
                 for each_text in links_texts:
                     links.append(each_text.text.strip())
-        links = [dict(t) if type(t) == tuple else t for t in {tuple(d.items())  if type(d) == dict else d for d in links}]
+        #links = [dict(t) if type(t) == tuple else t for t in {tuple(d.items())  if type(d) == dict else d for d in links}]
+        links=list(set(links))
         return links
 
 
@@ -116,9 +119,10 @@ class ResumeCrawler:
         for each_content in additionalInfo_contents:
             additionalinfo_sections = each_content.find_all('div', attrs={'id': 'additionalinfo-section'})
             for each_section in additionalinfo_sections:
-                additional_info = each_section.text.strip()
+                additional_info.append(each_section.text.strip())
         #print(type(additional_info), additional_info)
         #additional_info = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in additional_info }]
+        additional_info=list(set(additional_info))
         return additional_info
 
 
@@ -152,7 +156,8 @@ class ResumeCrawler:
         for each_summary in res_summaries:
             res_summary = each_summary.text.strip()
             summaries.append(res_summary)
-        summaries = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in summaries  }]
+        summaries=list(set( summaries))
+        #summaries = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in summaries  }]
         return summaries
 
 
@@ -176,7 +181,33 @@ class ResumeCrawler:
         awards = [dict(t) if type(t) == tuple else t for t in {tuple(d.items()) if type(d) == dict else d for d in awards }]
         return awards
 
+    def get_publication(self, soup):
+    publication=[]
+    publication_contents = soup.find_all('div', attrs={'class': 'publications-content'})
+    publication=[]                      
+    publication_sections = soup.find_all('div', attrs={'class': 'publication-section'})
+    #print(len(education_contents))
+    for each_section in publication_sections:
+                            #print(each_section)
+                            publication_item = {}
+                            titles = each_section.find_all(name='div', attrs={'class': 'publication_title'})
+                            for each_title in titles:
+                                publication_item['title'] = each_title.text.strip()
+                            publication_date = each_section.find_all(name='div', attrs={'class': 'publication_date'})
+                            for each_date in publication_date:
+                                publication_item['date'] = each_date.text.strip()
+                            publication_url = each_section.find_all(name='div', attrs={'class': ' publication_url'})
+                            
+                            for each_url in  publication_url:
+                                
+                                publication_item [' publication_url'] = driver.find_elements_by_css_selector("div. publication_url a").get_attribute('href')
+                                print(publication_item [' publication_url'])
+                            publication.append(publication_item)
+                                                
+                        
+    publication=([dict(t) for t in {tuple(d.items()) for d in publication}]) 
 
+        
     def initialise_files(self, file_name):
         if not os.path.isfile(file_name):
             with open(file_name, 'w') as f:
@@ -185,14 +216,15 @@ class ResumeCrawler:
 
     def get_data(self, soup):
         content={}
+         content['summaries'] = self.get_summaries(soup)
         content['education'] = self.get_education(soup)
         content['work_experience'] = self.get_work_experience(soup)
         content['skills'] = self.get_skills(soup)
         content['links'] = self.get_links(soup)
         content['additional_info'] = self.get_additional_info(soup)
         content['certifications'] = self.get_certifications(soup)
-        content['summaries'] = self.get_summaries(soup)
         content['awards'] = self.get_awards(soup)
+        content['publication'] = self.get_awards(soup)
 
         return content
 
@@ -223,3 +255,26 @@ class ResumeCrawler:
         self.initialise_files('files/result.json')
         with open('files/result.json', 'a') as fp:
             json.dump(contents, fp)
+        def unmangle_utf8(match):
+    
+         escaped = match.group(0)                   # '\\u00e2\\u0082\\u00ac'
+         hexstr = escaped.replace(r'\u', '')      # 'e282ac'
+         buffer = codecs.decode(hexstr, "hex")      # b'\xe2\x82\xac'
+
+         try:
+            return buffer.decode('utf8')           # '€'
+         except UnicodeDecodeError:
+            print("Could not decode buffer: %s" % buffer)
+
+        with open('result.json', 'r') as f:
+    
+          for line in f:
+             
+        line = re.sub(r"(?i)(?:\\u[0-9a-f]{4})+", unmangle_utf8,line)
+        line=line.replace("\\","")
+        line=line.replace('\\n',"")
+        #line=line.replace('\\',"")
+        line=re.sub("\s\s+", " ", line)
+      with open('result'+str(i)+'.json', 'w') as f:
+        json.dump(line,f)
+        driver.close()
