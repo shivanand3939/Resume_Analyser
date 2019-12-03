@@ -215,7 +215,7 @@ class ResumeCrawler:
         self.driver.close()
 
         contents = []
-        for url in urllinks[:2]:
+        for url in urllinks:
             soup, child_driver = self.get_driver_for_single_resume(url)
             contents.append(self.get_data(soup))
             child_driver.close()
