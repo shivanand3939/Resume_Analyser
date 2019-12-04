@@ -1,0 +1,42 @@
+Job description
+Job Description
+The Intelligent Systems Lab is seeking an experienced software architect and engineer. The Intelligent Systems Lab is devoted to high-impact basic research on intelligent systems. Projects in the lab span artificial intelligence, machine learning, robotics, computer vision, and computer graphics
+
+The successful candidate will support the development and implementation of cutting-edge research projects by working closely with the lab's researchers. We expect that the candidate will gain experience and expertise in new areas of cutting-edge research on intelligent systems by working at the research frontier with some of the leaders in the field.
+
+
+Qualifications
+
+Required qualifications:
+- Bachelor's, Master's, or Doctoral Degree in Computer Science or a related discipline
+- Proficient in C/C++ programming (4+ years of experience)
+- Proficient in parallel programming using CUDA or OpenCL (2+ years of experience)
+- Proficient in Python and NumPy programming (3+ years of experience)
+- Competent in deep learning frameworks, such as PyTorch or TensorFlow (1+ years of experience)
+- A proven track record of successful projects in data science (open source contributions, competitions such as Kaggle, or peer-reviewed scientific papers)
+- Experience with at least two of the following: machine learning, computer vision, robotics, 3D data processing, scientific computing, mobile app development
+- Experience in code optimization and profiling
+- Experience in collaborative software development with Git
+
+Additional preferred qualifications:
+- Expert in C/C++ programming (10+ years of experience)
+- Experience with numerical computing libraries such as Eigen and Intel MKL
+- Experience with multi-threaded design and parallel computing using tools such as OpenMP and TBB
+- Experience with data visualization
+- Experience with robotics, including software and hardware
+- Experience with game engines (Unity3D, Unreal) and graphics APIs (OpenGL, DirectX)
+- Experience in mobile app development
+- Strong Communication Skill
+
+ 
+RoleSoftware Developer
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - Application Programming, Maintenance
+Employment TypeFull Time, Permanent
+Role CategoryProgramming & Design
+Education
+UG :B.Sc in Computers, BCA in Computers, B.Tech/B.E. in Computers
+PG :MS/M.Sc(Science) in Computers, M.Tech in Computers, MCA in Computers
+Doctorate :Doctorate Not Required
+Key Skills
+Data Science ComputerGraphics SoftwareDevelopment C ArtificialIntelligence DataVisualization ComputerVision MachineLearning DeepLearning Python

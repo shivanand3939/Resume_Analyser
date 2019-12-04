@@ -1,0 +1,45 @@
+Job description
+Introduction
+As a SAS Developer (Data Scientist) at IBM, you will help transform our clients' data into tangible business value by analyzing information, communicating outcomes and collaborating on product development. Work with Best in Class open source and visual tools, along with the most flexible and scalable deployment options. Whether it's investigating patient trends or weather patterns, you will work to solve real world problems for the industries transforming how we live
+
+
+
+Your Role and Responsibilities
+As SAS Developer, you are responsible to develop and design analytical solutions and models in SAS
+You will develop models along with usage of technologies like SAS e-Miner, base SAS, standard SAS PROCs, advanced SAS etc.
+Demonstrate expertise in SAS e-Miner tool along with SAS VA
+Provide programming support of ad-hoc requests and special projects as assigned
+
+
+
+Required Candidate profile
+
+Required Technical and Professional Expertise
+Minimum 4+ years of experience in developing and designing Analytical solutions and models in SAS
+Proficient in developing models and working knowledge of other analytical tools like R/ SPSS is desirable but not mandatory.
+Minimum of two years of experience of working with SAS e-Miner, base SAS, standard SAS PROCs, advanced SAS etc. and shall demonstrate at least 2 projects where they have worked with SAS e-Miner.
+Expertise in having worked with SAS VA for at least 2 projects, and with atleast 1 year of experience of working with SAS VA
+Proven communication skills in in English and solid writing, MIS, communication, time management and multi-tasking skills
+
+
+
+Preferred Technical and Professional Expertise
+Full time qualification in MCA /M. Tech/B. Tech/B.E./ Post Graduates (Statistics/ Economics/ Mathematics/ Business) and well versed with statistical modelling/ data science concepts
+You love collaborative environments that use agile methodologies to encourage creative design thinking and find innovative ways to develop with cutting edge technologies
+Ambitious individual who can work under their own direction towards agreed targets/goals and with creative approach to work
+Intuitive individual with an ability to manage change and proven time management
+Proven interpersonal skills while contributing to team effort by accomplishing related results as needed
+Up-to-date technical knowledge by attending educational workshops, reviewing publications
+
+
+RoleOther
+Industry TypeIT-Software / Software Services
+Functional AreaAnalytics & Business Intelligence
+Employment TypeFull Time, Permanent
+Role CategoryOther
+Education
+UG :B.Tech/B.E. in Any Specialization
+PG :MBA/PGDM in Any Specialization, M.Tech in Any Specialization, MCA in Computers, M.A in Maths, Economics, Statistics
+Doctorate :Doctorate Not Required
+Key Skills
+BaseSAS DataScience R OpenSource AdvancedAnalytics StatisticalModeling TechnologConsulting SPSS Reseach Statistics

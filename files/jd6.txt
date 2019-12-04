@@ -1,0 +1,21 @@
+Job description
+We are looking to hire exceptional and hands-on experienced talent in the following areas
+
+1. AI and Deep Learning
+
+Experience in Deep Learning techniques for Image, Video and Sensor Based AI Platforms is required. Candidates should have hands-on experience in using state-of-the-art Deep Learning Frameworks and understanding of associated Mathematical Modeling and Optimization techniques. Strong background in Computer Vision and Image Processing Algorithms such as Object Detection, Recognition, Tracking and Segmentation, is required. Programming experience in Python/C++/Java and familiarity with libraries like Tensorflow, Torch, Caffe, Keras, OpenCV is essential.
+
+Perks and Benefits 
+
+insurance and other statutory benefits
+RoleSoftware Developer
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - Embedded, EDA, VLSI, ASIC, Chip Design
+Employment TypeFull Time, Permanent
+Role CategoryProgramming & Design
+Education
+UG :B.Tech/B.E.
+PG :M.Tech
+
+Key Skills
+imageprocessing deeplearning algorithms securitysurveillance embeddedsystems authentificationc omputervision NeuralNetworks MachineLearning videoprocessing SignalProcessing

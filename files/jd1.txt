@@ -1,0 +1,65 @@
+Job description
+Description:
+
+We need ace data scientists who can develop best in class predictive models, machine learning models and deep learning models and at the same time they should be able to explain the decisions taken by the models automatically through plain simple English language. The explainable elements should not be limited to the numbers and formulas, there must be a bit of personalization also to understand the context of the problem.
+
+Responsibilities:
+
+- Passion for learning new technologies and be up to date with the scientific research community.
+
+- Work in technical teams in development, deployment, and application of machine learning solutions, leveraging technical components and explaining the modelling decisions
+
+- Take responsibility for insights, reports and explanability of the decisions taken by predictive models
+
+- Responsible for taking an idea from concept to production thoroughly with feedback from all stakeholders.
+
+Required Candidate profile
+
+Skills Required:
+
+- Must have minimum of 5-7 years of industry experience in developing data science models.
+
+- Deep understanding and experience in the field of Machine Learning, Deep Learning and statistical learning
+
+- The person should be excellent at Classification (logistic regression, svm, decision tree, random forest, neural network), Regression (linear regression, decision tree, random forest, neural network), Classical optimisation (gradient descent, newton rapshon, etc), Graph theory (network analytics), Heuristic optimisation (genetic algorithm, swarm theory)
+
+- Should be strong at Deep leaning (CNN, LSTM, RNN, Bi-LSTM)
+
+- Must have thorough mathematical knowledge of correlation/ causation, decision trees, classification and regression models, recommenders, probability and stochastic processes, distributions, priors and posteriors.
+
+- Skilled at scientific programming languages such as Python, R, Matlab and writing deployable code into production.
+
+- Understand the model lifecycle of cleansing/standardizing raw data, feature creation /selection, writing complex transformation logic to generate independent and dependent variables, model selection, tuning, A/B testing and generating production ready code.
+
+- Knowledge of Numerical optimization, Linear/Non-linear/ Integer programming, Statistics, Combinatorial optimization is a plus.
+
+- Familiarity with R, Apache Spark (Scala, Python), PyMC3/ theano/ tensorflow/ Keras and other scientific python/R modules is a must.
+
+- AI skillsets - hands-on Machine learning and Deep Learning algorithms and platforms, neural networks in any, or all the following areas, specifically, in Data & Analytics use cases
+
+Language - Natural Language Processing, machine translation, emotion detection, language detection, classification
+
+Vision - computer vision, object recognition/tracking, face/ gender/ age/ emotion recognition, OCR/handwriting recognition
+
+- Knowledge and experience in some of the key AI platforms will be important, e.g. IBM Watson, Microsoft Azure, Google Api.Ai, Facebook Wit.Ai, Chatbots using Microsoft Bot Framework
+
+- Knowledge and experience of key machine learning and deep learning framework, e.g. Keras, TensorFlow, Caffe, CNTK, Jiraffe, MXNet and PyTorch commercial technologies/platforms, etc
+
+Qualifications
+
+- Masters- in Computer Science/M. tech/ PhD/ Statistics/ Econometrics /Applied Mathematics/ Applied Statistics /Operations Research is a must
+
+- Hands on Experience with data mining or machine learning, deep learning, computer vision, natural language processing
+
+- Hands on Experience in developing deep learning models and explaining the results of deep learning models in a business-friendly manner
+RoleOther
+Industry TypeIT-Software / Software Services
+Functional AreaAnalytics & Business Intelligence
+Employment TypeFull Time, Permanent
+Role CategoryOther
+Education
+UG :Any Graduate in Any Specialization
+PG :M.Tech in Computers
+Doctorate :Ph.D in Statistics, Computers, Economics, Maths
+Key Skills
+Data Science NLP Data Scientist Artificial Intelligence Data Management Data Modeling Machine Learning Statistics Python

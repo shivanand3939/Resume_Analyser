@@ -1,0 +1,29 @@
+
+Job description
+Data Engineer
+We are looking for technically savvy Data Engineers who would be driven by passion to aid building of the business' data collection systems and processing pipelines. Data Engineer is responsible for building and maintaining optimized and highly available data pipelines that facilitate deeper analysis and reporting by the Data Sciences and Analytics teams.
+
+Technical Requirements:
+1 - 4 years of experience of data engineering and Big Data systems
+Proficient understanding of distributed computing principles
+Hands on experience in programming or scripting languages like Java, Javascript, Ruby, Python, R
+Good knowledge of various ETL techniques and frameworks
+Experience on Data Visualisation frameworks like D3.js
+Experience with NoSQL databases such as HBase, Cassandra, MongoDB
+Experience with Machine Learning toolkits such as Mahout, SparkML, H2O
+Good Knowledge of Big data querying tools such as Hive, Pig
+Serious expertise in SQL
+Responsibilities and job related expectations:
+Ability to manage and access highly scalable Big Data solutions that can collect, store, process & analyze huge sets of data.Be responsible for set up, maintenance and running Big Data Infrastructure, ETL workflows, highly available and scalable data systems that supports Data Sciences and teams that would use the infrastructureResponsible for designing and developing scalable ETL packages from the business source systems and the development of ETL routines in order to populate databases from sources and also to create aggregates.Partner with Data Scientist and Analytics professionals, designers, project managers, QA engineers, operations engineers, third party systems providers and other stakeholders in the Data ecosystem of the organization to ensure timely and correct access to data when needed.To be able to build scalable data access mechanism to achieve industrialization that would make data access easier for the Data Science and Analytics teams.Able to work on automation options for data access and data preparation.
+The person shall strive to continuously develop new and improved data engineering capabilities.
+RoleDatabase Architect/Designer
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - DBA, Datawarehousing
+Employment TypeFull Time, Permanent
+Role CategoryProgramming & Design
+Education
+UG :Any Graduate in Any Specialization
+PG :Any Postgraduate in Any Specialization
+Doctorate :Doctorate Not Required
+Key Skills
+Java Hive NoSQL DataVisualisation Cassandra BigData MongoDB D3.Js distributedcomputing HBase Pig Python

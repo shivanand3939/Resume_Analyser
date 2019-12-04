@@ -1,0 +1,23 @@
+Job description
+Job Responsibilities
+Works to design and develop analytical/ data mining/ machine learning models as part of data science solutions
+
+Gather, evaluate and document business requirements, translate to data science solution definition, and ability to implement solution on a Big Data platform
+
+Ability to design and build an end-to-end prototype data science solution to a business problem in any specific sector/ function
+
+Ability to support and guide end-to-end model lifecycle management
+
+Create model documentation as per client/ regulatory standards
+
+RoleResearch Scientist
+Industry TypeIT-Software / Software Services
+Functional AreaMedical, Healthcare, R&D, Pharmaceuticals, Biotechnology
+Employment TypeFull Time, Permanent
+Role CategoryR&D
+Education
+UG :Any Graduate in Any Specialization
+PG :Post Graduation Not Required
+Doctorate :Doctorate Not Required
+Key Skills
+Prototype datascience Analytical Machinelearning Management Datamining big data

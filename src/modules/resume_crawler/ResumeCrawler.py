@@ -17,7 +17,7 @@ class ResumeCrawler:
         chrome_options.add_argument('disable-infobars')
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-        self.driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(executable_path = 'C:/Users/ACER/Downloads/indeed-resume-scraper-master/chromedriver.exe', chrome_options=chrome_options)
         self.driver.get(urlpage)
         time.sleep(8)
 
@@ -28,7 +28,7 @@ class ResumeCrawler:
         chrome_options.add_argument('disable-infobars')
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-        child_driver = webdriver.Chrome(executable_path = 'files/chromedriver', chrome_options=chrome_options)
+        child_driver = webdriver.Chrome(executable_path = 'C:/Users/ACER/Downloads/indeed-resume-scraper-master/chromedriver.exe', chrome_options=chrome_options)
         child_driver.get(url)
         time.sleep(1)
         p_element = child_driver.page_source
@@ -182,12 +182,12 @@ class ResumeCrawler:
         return awards
 
     def get_publication(self, soup):
-    publication=[]
-    publication_contents = soup.find_all('div', attrs={'class': 'publications-content'})
-    publication=[]                      
-    publication_sections = soup.find_all('div', attrs={'class': 'publication-section'})
-    #print(len(education_contents))
-    for each_section in publication_sections:
+        publication=[]
+        publication_contents = soup.find_all('div', attrs={'class': 'publications-content'})
+        publication=[]                      
+        publication_sections = soup.find_all('div', attrs={'class': 'publication-section'})
+        #print(len(education_contents))
+        for each_section in publication_sections:
                             #print(each_section)
                             publication_item = {}
                             titles = each_section.find_all(name='div', attrs={'class': 'publication_title'})
@@ -205,18 +205,43 @@ class ResumeCrawler:
                             publication.append(publication_item)
                                                 
                         
-    publication=([dict(t) for t in {tuple(d.items()) for d in publication}]) 
+        publication=([dict(t) for t in {tuple(d.items()) for d in publication}]) 
 
         
-    def initialise_files(self, file_name):
-        if not os.path.isfile(file_name):
-            with open(file_name, 'w') as f:
-                f.write('')
+    def initialise_files(self, file_name,contents,i):
+        
+            with open('C:/Users/ACER/Resume_Analyser/files/result.json', 'w') as fp:
+              json.dump(contents, fp)
+            def unmangle_utf8(match):
+    
+                    escaped = match.group(0)                   # '\\u00e2\\u0082\\u00ac'
+                    hexstr = escaped.replace(r'\u', '')      # 'e282ac'
+                    buffer = codecs.decode(hexstr, "hex")      # b'\xe2\x82\xac'
+
+                    try:
+                           return buffer.decode('utf8')           # '€'
+                    except UnicodeDecodeError:
+                          print("Could not decode buffer: %s" % buffer)
+
+
+            
+            with open('C:/Users/ACER/Resume_Analyser/files/result.json', 'r') as f:
+    
+                  for line in f:
+             
+                        line = re.sub(r"(?i)(?:\\u[0-9a-f]{4})+", unmangle_utf8,line)
+                        line=line.replace("\\","")
+                        line=line.replace('\\n',"")
+                        #line=line.replace('\\',"")
+                        line=re.sub("\s\s+", " ", line)
+            with open('C:/Users/ACER/Resume_Analyser/files/result'+str(i)+'.json', 'w') as f:
+                     json.dump(line,f)
+                     
 
 
     def get_data(self, soup):
         content={}
-         content['summaries'] = self.get_summaries(soup)
+        content['summaries'] = self.get_summaries(soup)
         content['education'] = self.get_education(soup)
         content['work_experience'] = self.get_work_experience(soup)
         content['skills'] = self.get_skills(soup)
@@ -244,37 +269,15 @@ class ResumeCrawler:
             urllinks.append(element.get_attribute("href"))
 
         print(len(urllinks))
-        self.driver.close()
+        #self.driver.close()
 
-        contents = []
+        #contents = []
+        i=0
         for url in urllinks:
+            i+=1
             soup, child_driver = self.get_driver_for_single_resume(url)
-            contents.append(self.get_data(soup))
+            contents=(self.get_data(soup))
+            #child_driver.close()
+
+            self.initialise_files('C:/Users/ACER/Resume_Analyser/files/result.json',contents,i)
             child_driver.close()
-
-        self.initialise_files('files/result.json')
-        with open('files/result.json', 'a') as fp:
-            json.dump(contents, fp)
-        def unmangle_utf8(match):
-    
-         escaped = match.group(0)                   # '\\u00e2\\u0082\\u00ac'
-         hexstr = escaped.replace(r'\u', '')      # 'e282ac'
-         buffer = codecs.decode(hexstr, "hex")      # b'\xe2\x82\xac'
-
-         try:
-            return buffer.decode('utf8')           # '€'
-         except UnicodeDecodeError:
-            print("Could not decode buffer: %s" % buffer)
-
-        with open('result.json', 'r') as f:
-    
-          for line in f:
-             
-        line = re.sub(r"(?i)(?:\\u[0-9a-f]{4})+", unmangle_utf8,line)
-        line=line.replace("\\","")
-        line=line.replace('\\n',"")
-        #line=line.replace('\\',"")
-        line=re.sub("\s\s+", " ", line)
-      with open('result'+str(i)+'.json', 'w') as f:
-        json.dump(line,f)
-        driver.close()

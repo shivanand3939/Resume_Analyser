@@ -1,0 +1,47 @@
+Job description
+Company is powered by our proprietary audio content recognition algorithm. Around this core piece, we have built infrastructure that allows us to operate at scale, making us one of the largest companies in terms of ACR in the world. As a result, we are constantly discovering and finding solutions to problems that are unique to us, and pushing the boundaries of what is possible.
+
+
+- Beyond fingerprinting, we process media consumption data for over 50M users across India and Indonesia, processing terabytes of information on a daily basis. This data powers our data business for brands, broadcasters and media agencies in India. We have also built our own advertising platform which is powered by our media consumption data, and execute mobile ad campaigns for hundreds of brands through this platform.
+
+
+- Technologically, we are at the forefront in whatever we do today, and also constantly seek out newer and increasingly difficult, challenging problems which need innovative solutions. Our work is growing beyond audio fingerprinting into areas such as computer vision, speech processing and interesting products leveraging the massive data we own.
+
+
+- These problems need creative, strong contributors to take up these challenges! company is focusing on building exciting products based on automatic speech recognition (ASR) and text to speech (TTS) technology for the media industry.
+
+You can read more about our research group and the work we are doing : We are currently looking for research engineers with a strong background in both machine learning and speech technology, to develop novel algorithms and push the limits of spoken language recognition and generation.
+
+Responsibilities will include :
+
+- Research and implement novel machine learning approaches for audio and speech-related projects.
+
+- Publishing papers at prestigious conferences and filing patents.
+
+- Staying up to date on industry trends and best practices
+
+Required Qualifications :
+
+- Graduate degree in Electrical / Electronics / Computer Science Engineering with specialization in signal/speech processing
+
+- 2+ years of industry experience.
+
+- Having experience in building and deploying deep learning-based audio, speech, TTS or NLP systems.
+
+
+- Experience in Deep Learning Frameworks such as TensorFlow or PyTorch
+
+- Proficiency in programming languages such as Python, C++ or Java R
+
+Compensation Competitive with tier-1 industry standards
+RoleData Analyst
+Industry TypeKPO / Research / Analytics
+Functional AreaAnalytics & Business Intelligence
+Employment TypeFull Time, Permanent
+Role CategoryAnalytics & BI
+Education
+UG :Graduation Not Required, Any Graduate in Any Specialization
+PG :Post Graduation Not Required, Any Postgraduate in Any Specialization
+Doctorate :Doctorate Not Required, Any Doctorate in Any Specialization
+Key Skills
+Java C++ R NLP Algorithms Programming ComputerVision MachineLearning DeepLearning Python

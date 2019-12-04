@@ -1,0 +1,28 @@
+Job description
+Roles and responsibilities
+
+As a Data Scientist - Research, you will have the onus of working with large, complex data sets. Solve difficult, non-routine analysis problems, applying advanced analytical methods as needed; Conduct end-to-end analysis that includes research, hypothesis testing, and thought leadership. You will work on state-of-the-art technologies and build things that have never existed in the past spanning across building Machine Learning solutions, implementing complex data processing flows to crunch data and produce insights and mentoring a team of data scientists to create world-class AI-based products for healthcare
+Required Candidate profile
+
+What you'll need
+
+PhD in Computer Science/ Electrical Engineering from a premier institute
+MTech/MS in Computer Science/ Electrical Engineering with significant research experience and publications can also qualify. Will need 2+ years of post-MS/ MTech industry experience
+Hands on experience in any two of the following: Machine learning/feature engineering/pattern recognition in one or more of the following fields - medicine, financial, supply chain optimisation
+Building and implementing advanced statistical models and data mining
+Computer vision techniques; deep learning and applications of machine learning on images and videos
+Publications in the field of machine learning/pattern recognition/computer vision in tier-1 journals and conferences
+Experience in mentoring a team of data scientist technically is preferable
+
+This position will report directly to the Chief Scientific Officer.
+RoleDBA
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - DBA, Datawarehousing
+Employment TypeFull Time, Permanent
+Role CategoryAdmin/Maintenance/Security/Datawarehousing
+Education
+UG :B.Sc in Electronics, Computers, B.Tech/B.E. in Electrical, Electronics/Telecommunication, Computers, Any Graduate in Any Specialization
+PG :M.Tech in Computers, Electrical, Electronics/Telecommunication, MS/M.Sc(Science) in Computers, Electronics, Electrical Engineering, Any Postgraduate in Any Specialization, MCA in Computers
+Doctorate :Any Doctorate in Any Specialization, Doctorate Not Required
+Key Skills
+Data Science PatternRecognition Artificial Intelligence AI ImageProcessing ComputerScience DataMining Research ComputerVision MachineLearning DeepLearning

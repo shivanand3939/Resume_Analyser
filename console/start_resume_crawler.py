@@ -1,5 +1,7 @@
-from src.modules.resume_crawler.ResumeCrawler import ResumeCrawler
-
+import  sys
+sys.path.append('C:/Users/ACER/Resume_Analyser/src/modules/resume_crawler/')
+#from src.modules.resume_crawler.ResumeCrawler import ResumeCrawler
+from ResumeCrawler import ResumeCrawler
 if __name__ == '__main__':
 
     urlpage1 = 'https://resumes.indeed.com/search?l=&lmd=all&q=datascience&searchFields=jt%2Cskills'

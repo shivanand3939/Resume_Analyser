@@ -1,0 +1,42 @@
+Job description
+Job Title: Advisor, Data Intelligence Engineer
+
+Role Overview:
+
+Adviser, Data Intelligence Engineer at DELL EMC is responsible for providing the required capabilities of turning data into actionable insights. Data Intelligence Engineer Will Design solutions, framework and Data Integration solutions. Design and develop new environments, methodologies, processes, tools, and data governance structures to enable effective analysis and advanced modeling against data sets. They also have responsibility for creating specifications for ETL & Data Integrations based on business need and recommending strategic/tactical plans based on business data and market trends. In addition, analyze complex business problems and issues using data to provide insight to decision makers. This job function may include the following disciplines: Data modeling, data integration, visualization, data architecture and solutions to internal DELL EMC DTS BI Team.
+
+Key Responsibilities:
+
+Understand business requirements to translate business problems into analytics problems and construct analysis road-map based on the business context
+Assist in implementation of various models with modelling, research, analytics and software team. Responsibilities include reviewing the theoretical assumptions
+Helps to build high-level analytics strategies and Understands data intelligence strategies.
+Has knowledge and understanding of BI and Data intelligence practices & processes.
+Understand industry standards and tools in data intelligence and analytics.
+Strong Experience with Tableau, SAP BOBJ, statistical analysis, database and data mining and blending techniques.
+Some experience with data visual design and programming/scripting/SQL, Some UI design and user experience skills.
+Monitor industry trends on data intelligence and analytics. Collaborate with other engineers and other engineering and business groups.
+In-depth experience in data intelligence & analytics tools, process, methodologies and best practices. Knowledge and wide application of principles, theories, and concepts, and working knowledge of other related fields.
+Required Candidate profile
+
+Essential Requirements:
+
+6+ years of experience in developing BI Tools and Technologies like Informatica, Tableau, SAP BOBJ applications.
+Strong Expertise in Informatica, Tableau and New analytics tools
+Expertise in managing ETL and Analytics, SQL, PL/SQL teams
+Experience working with Big data and analytics projects
+Desirable Requirements:
+
+Strong communication, interpersonal, planning and problem-solving skills
+Flexible with timings and being available for all global regions
+Conduct business-based conversations to identify stakeholders, business process, KPI" s and critical success factors around an opportunity
+RoleFunctional Outside Consultant
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - DBA, Datawarehousing
+Employment TypeFull Time, Permanent
+Role CategorySystem Design/Implementation/ERP/CRM
+Education
+UG :Any Graduate in Any Specialization
+PG :Any Postgraduate in Any Specialization
+Doctorate :Doctorate Not Required
+Key Skills
+BigDataAnalytics UserExperience DataMining UsernterfaceDesigning Informatica Tableau VisualDesign DataIntegration SAPBOBJapplications DataAnalysis DataModeling DataGovernanceS tatisticalAnalysis

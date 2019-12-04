@@ -1,0 +1,42 @@
+Job description
+The Offer
+Be a part of a well-funded, high-growth fintech startup
+High growth potential and an excellent working environment
+The Employer
+
+Our client is a high growth fintech start-up founded by a group of ex-bankers, averaging 15 years experience.The platform allows users to transfer value along with digital content through social networks. The company has raised over USD 10+ million in their recent Series A funding and are now expanding their team across Asia.
+
+The Job
+
+As part of the Data Science Team, you will drive data analytics activities ranging from conceptualisation, visualisation to operationalisation. You will also need to identify and capitalise on opportunities to leverage data to drive business solutions.
+
+
+Your responsibilities will include:
+
+Creating predictive and prescriptive models that could have a positive impact on the business.
+Performing statistical analysis of historical data to validate models.
+Building and implementing state-of-the-art deep learning models.
+Scoping and formulating potential AI projects.
+Continuously improving existing processes.
+Partnering with product/engineering to deliver machine learning models in the production environment to end-users.
+Providing expertise on concepts for machine learning.
+
+The Profile
+You possess an advanced degree, ideally a PHD, in Mathematics, Statistics, Computer Science or related field, with at least 3 years of experience as a Data Scientist.
+You have the ability to write and execute complex queries in SQL.
+You possess a strong knowledge of Python and R.
+Expertise in Natural Language Processing/Text Mining, Deep Learning, Machine Learning and/or Artificial Intelligence (Neural Networks, Fuzzy Logic, Evolutionary Algorithms) would be highly valuable.
+You possess strong analytical skills and are comfortable dealing with numerical data.
+You have high level of initiative and like to take on a good challenge.
+You are highly goal-driven and work well in fast-paced environments.
+RoleDatabase Architect/Designer
+Industry TypeIT-Software / Software Services
+Functional AreaIT Software - Other
+Employment TypeFull Time, Permanent
+Role CategoryProgramming & Design
+Education
+UG :Any Graduate in Any Specialization, Graduation Not Required
+PG :Post Graduation Not Required, Any Postgraduate in Any Specialization
+Doctorate :Doctorate Not Required, Any Doctorate in Any Specialization
+Key Skills
+DataScience R ArtificialIntelligence NaturalLanguageProcessing NeuralNetworks TextMining MachineLearning DeepLearning Python SQL
